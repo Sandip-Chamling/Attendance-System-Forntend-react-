@@ -1,4 +1,4 @@
-// src/components/attendance.js
+
 import React, { useState, useEffect } from 'react';
 import { getFromLocalStorage, saveToLocalStorage } from './components/LocalStorageUtils';
 import Swal from 'sweetalert2';
