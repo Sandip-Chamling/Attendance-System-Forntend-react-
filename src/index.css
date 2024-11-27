@@ -1,0 +1,1025 @@
+/*------------------------------------All------------------------------------------*/
+body{
+  background-color:rgb(128, 202, 132);
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, 
+  "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*---------------------------StudentRegistration/TeacherRegistration-------------------------*/
+.formContainer {
+  display: flex;
+  background-color: rgb(128, 202, 132);
+  margin-top: 140px;
+}
+
+/*---------------------------Form.js/FormBody.js-------------------------*/
+.mainDiv1{
+	background: #dce4e7;
+	height:auto;
+  width:800px;
+  margin-left: 100px;
+  padding-bottom: 10px;
+	box-shadow: 2px 2px 10px gray;
+  border-radius: 10px;
+}
+.mainDiv1 h1{
+  color:black;
+  font-size: 35px;
+  text-align: center;
+  padding-bottom: 0px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 20px;
+  text-decoration: underline;
+}
+.mainDiv1 p{
+text-align: center;
+}
+.mainDiv1 table{
+  margin-top:20px;
+  margin-left:80px;
+}
+.mainDiv1 label{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:20px;
+  padding-bottom: 10px;
+
+}
+.mainDiv1 input{
+  margin-top:0px;
+  width:270px;
+  height: 27px;
+  font-size: 18px;
+  box-shadow:gray;
+}
+.mainDiv1 select{
+ height:27px;
+ font-size:16px;
+ margin-left:0px;
+}
+
+.mainDiv1 table td{
+  padding:15px;
+}
+.rightSide {
+  flex: 2;
+  padding:0px;
+  margin-top: 0px;
+}
+.submitBtn{
+  margin-top: 30px;
+  margin-left: 40%;
+  height: 30px;
+  width:120px;
+  font-size: large;
+  border-radius: 5px;
+  background-color: rgb(48, 51, 231);
+  color:white;
+  padding:5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  
+}
+.submitBtn:hover{
+  background-color: green;
+}
+.cancelBtn{
+  background-color: red;
+  margin-left:100px;
+  height: 30px;
+  width:100px;
+  font-size: large;
+  border-radius: 5px;
+  color:white;
+  padding:5px;
+  cursor: pointer;
+}
+.cancelBtn:hover{
+  background-color: rgb(215, 87, 27);
+}
+
+/*---------------------------NameList.js-------------------------*/
+.nameList{
+  background-color: rgb(127, 161, 212);
+  width:550px;
+  height:580px;
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-top: 3px;
+  }
+.leftSide {
+  flex: 1;
+  padding:0px;
+  border-right: 1px solid #ddd;
+  padding-left: 100px;
+}
+.nameList ul {
+  padding-left: 70px;
+  padding-top: 5px;
+  list-style: none;
+}
+.nameList li {
+  margin-bottom: 10px;
+  font-size:23px;
+}
+.nameList li:hover{
+  text-decoration: underline;
+}
+.nameList li div{
+  margin-right:40px ;
+  border-color: solid black 1px;
+}
+.nameList h1{
+  padding-top:10px;
+  padding-bottom: 15px;
+  text-align:center;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+}
+.nameList input{
+  margin-left:120px;
+  text-align: center;
+  width:300px;
+  height: 35px;
+  font-size: larger;
+  border-radius: 10px;
+  background-color: rgb(169, 207, 214);
+}
+#faculty {
+  height: 30px;
+  margin-left: 60px; 
+  border-radius: 7px;
+  background-color: #d0f4f5;
+  font-size: 15px;
+}
+#semester{
+  height: 30px;
+  margin-left: 35px;
+  
+  border-radius: 7px;
+  background-color: #d0f4f5;
+  font-size: 15px;
+}
+.selectForm{
+  padding:5px;
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+.listDiv{
+  background-color: #43afde;
+  height: 350px;
+  width:460px;
+  margin-left: 45px;
+  border-radius: 8px;
+}
+.emptyStudent{
+  margin-left: 10px;
+  margin-top: 180px;
+  color: rgba(18, 18, 2, 0.5);
+  font-size: xx-large;
+}
+.selectMessage {
+  color: rgba(18, 18, 2, 0.5);
+  font-size: 20px; 
+  margin-left: 0px;
+  margin-top: 150px;
+}
+.nameDiv{
+  margin-top: 10px;
+}
+.listDiv button{
+  float: right;
+  margin-right:5px;
+  cursor: pointer;
+  padding:0px;
+  border-radius:5px;
+  height: 30px;
+  width:30px;
+  background-color: antiquewhite;
+  margin-right: 10px;
+}
+.nameList button:hover{
+  background-color: rgb(21, 21, 132);
+  color: white;
+  transform: scale(1.1); 
+}
+.nameList button:focus {
+  outline: none; /* Remove focus outline */
+}
+/*---------------------------------Popup.js--------------------------------------*/
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Make sure it's on top */
+}
+
+.popupContent {
+  background-color: rgb(193, 223, 236);
+  padding: 20px;
+  border-radius: 8px;
+  width:450px;
+  height: 500px;
+}
+.popupContent p{
+  margin-top:15px;
+}
+
+.popupContent h2 {
+  margin-top: 0;
+  text-decoration: underline;
+  color:blueviolet;
+}
+
+.popupContent button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:100px;
+}
+
+.popupContent button:hover {
+  background-color: #0056b3;
+}
+.popupContent p{
+  font-size: larger;
+}
+.popupContent strong{
+  margin-right: 10px;
+  margin-left: 20px;
+}
+/*--------------------------------------------Pegination.js-------------------------------------*/
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top :10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pagination button {
+  padding:5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width:70px;
+  }
+
+.pagination button:disabled {
+  background-color: #007bff;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: large;
+}
+
+.spanTxt{
+  text-align: center;
+}
+
+/*--------------------------------------App.js---------------------------------------*/
+ .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  background-color: #0e0651;
+  position: fixed; 
+  padding: 0px;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 120px;
+  
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin: 0px;
+}
+
+.logo {
+  height: 80px;
+  
+}
+
+.test {
+  color: #c73b3f;
+  margin-left: 410px;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navUl {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.navUl li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.activeLink {
+  color: #007bff;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.navLink:hover {
+  color: rgb(126, 204, 227);
+}
+
+.logoutBtn{
+  background-color:#0e0651;
+  text-decoration: underline;
+  color:white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.logoutBtn:hover{
+  color: red;
+}
+/*------------------------*/
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(192, 209, 212, 0.7);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  color: black;
+}
+
+
+.dropdown-content li {
+  padding: 8px 0px;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  display: block;
+  color: rgb(12, 11, 11);
+}
+
+.dropdown-content li a:hover {
+  background-color: #c8d2c7;
+  color:#2196F3
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*----------------------------------------------Attendance.js----------------------------------*/
+
+.attendDiv1{
+  background-color:rgb(128, 202, 132);
+  height:auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 180px;
+  margin-bottom: 70px;
+  padding-bottom: 1px;
+}
+.attendSelectDiv1{
+background-color: #a9c6e4;
+height: auto;
+margin-top: 10px;
+margin-right: 200px;
+padding: 30px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+padding: 20px;
+border: 3px solid rgb(12, 12, 12,0.7);
+}
+.attendSelectDiv1 label{
+  font-size: 25px;
+  font-weight: bold;
+}
+.attendSelectDiv1 select, .attendSelectDiv1 input {
+  margin-bottom: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.attendDiv2{
+  background-color: #99cedf;
+  width:40%;
+  height:auto;
+  border-radius: 10px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 10px;
+  padding-bottom:20px;
+  border: 3px solid rgb(12, 12, 12,0.7);
+}
+.attendDiv2 h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.attendDiv2 button{
+  text-align: center;
+  margin-left: 190px;
+  margin-top: 40px;
+  height: 32px;
+  width: 150px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #12a829;
+  color: white;
+}
+.attendDiv2 button:hover{
+  background-color: #0d701b;
+}
+.attendDiv2 table td{
+  font-size: 23px;
+}
+.attendDiv2 table{
+  margin-top: 0px;
+}
+.attendPrag{
+  font-size: 25px;
+  text-align: center;
+  margin-top: 60px;
+  color:rgb(19, 18, 18,0.5)
+}
+
+.dateLabel{
+  font-size: 23px;
+}
+.dateInput{
+  margin-left: 20px;
+  border-radius: 5px;
+  height: 25px;
+}
+.attendDiv2 h4{
+  margin-top: 10px;
+  font-size: 25px;
+  text-decoration: underline;
+}
+.td1{
+  width: 400px;
+}
+
+.switch-wrapper {
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+input:disabled + .slider {
+  background-color: #e9e9e9;
+  cursor: not-allowed;
+}
+
+input:checked:disabled + .slider {
+  background-color: #b3d8fd;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/*-------------------------------------Report.js--------------------------------------*/
+.mainRepoDiv{
+  margin-top: 140px;
+  margin-bottom: 70px;
+}
+.recordType{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 170px;
+}
+.recordType2{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 140px;
+}
+
+/*--------------------------------------Individual.js----------------------------------*/
+.reportDiv {
+  margin-bottom: 0px;
+  background-color: #687686;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left:80px ;
+  width:350px;
+}
+.reportDiv form{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color:#a3bfdc;
+  border-radius: 10px;
+
+}
+.individualForm select, .individualForm input {
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.reportDiv label{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainIndividual{
+  background-color: #a2a2f0;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.mainGridDiv{
+  background-color: #939ca4;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns:auto auto auto auto auto auto auto ;
+  padding: 10px;
+  padding-left: 0px;
+  border-radius: 10px;
+}
+
+.present{
+  color:rgb(233, 238, 233);
+  background-color: #229735;
+}
+.absent{
+  color:rgb(245, 242, 242);
+  background-color: rgb(151, 52, 52);
+}
+.Holiday{
+  color:rgb(19, 17, 17,0.5);
+  background-color: rgba(201, 201, 190, 0.893);
+  
+}
+.calendar th{
+  background-color: #1c1173;
+  color: white;
+}
+.present,.absent, .empty{
+  border:1px solid black;
+  
+}
+.totalDiv{
+  font-size: 20px;
+  padding: 0px;
+  margin-left: 20px;
+  background-color: #b6bdb7;
+  border: 3px solid rgb(12, 12, 12,0.7);
+  border-radius: 10px;
+  width:100%;
+}
+.totalDiv td{
+  padding:10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.dateDiv{
+margin-top:10px ;
+font-size: 30px;
+margin-left: 10px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.calendar{
+width:100%;
+height: 400px;
+background-color: rgb(249, 242, 242);
+border-collapse: collapse;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.calendar th{
+  font-size: larger;
+}
+
+.calendarTr, .calendarTr td{
+  border: 2px solid black;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  text-align: center;
+}
+/*-----------------------------------------Section.js----------------------------------------------*/
+
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  padding: 20px; 
+  background-color: #7a8da0;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right:100px ;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.formContainer2 {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0px;
+  background-color: #687686;
+  width: 345px;
+  margin-right: 100px;
+  margin-left: 100px;
+   padding: 20px; 
+  padding-top: 13px;
+  height: 385px;
+}
+
+.attendSelectDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 2px;
+  background-color: #a3bfdc;
+}
+
+
+.attendSelectDiv select, .attendSelectDiv input[type="date"] {
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.attendSelectDiv label{
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.attendanceTableContainer {
+  border: 3px solid rgb(12, 12, 12,0.7);
+  border-radius: 5px;
+  padding: 20px;
+  width:40%;
+  height: auto;
+  background-color: #bee3dd;
+}
+
+.sectionTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sectionTable th {
+  border: 1px solid #090909;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #3a3f47;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sectionTable td {
+  border: 1px solid #090909;
+  padding: 10px;
+  font-size: 20px;
+  text-align: left;
+  background-color: #f7f7f7;
+}
+
+.sectionTable tr:nth-child(even) td {
+  background-color: #e6dddd;
+}
+
+.sectionTable tr:hover td {
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+
+.sectionTable th, .sectionTable td {
+  transition: background-color 0.3s ease;
+}
+
+.sectionTable th:first-child, .sectionTable td:first-child {
+  border-left: 2px solid #090909;
+}
+
+.sectionTable th:last-child, .sectionTable td:last-child {
+  border-right: 2px solid #090909;
+}
+
+.sectionTable tr:last-child td {
+  border-bottom: 2px solid #090909;
+}
+
+.errorMessage {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 160px;
+  color:rgb(6, 6, 6,0.5)
+}
+.totalContainer{
+  border: 3px solid rgb(12, 12, 12,0.7);
+  border-radius: 5px;
+  margin-top: 0px;
+  background-color: #d3dbe4;
+  width: 400px;
+  margin-right: 100px;
+  margin-left: 50px;
+  padding-left: 30px; 
+  padding-top: 50px;
+  height: 400px;
+  font-size: 22px;
+}
+.totalContainer table{
+  margin-left:0px;
+}
+.totalContainer td{
+  padding:20px;
+}
+ .absentStd{
+  color:red;
+ }
+
+/*-----------------------------------------Range.js----------------------------------------------*/
+
+.rangeContainer {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  padding: 20px; 
+  background-color: #8b899f;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right:100px ;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.formContainer3 {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0px;
+  background-color: #687686;
+  width: 600px;
+  margin-right: 100px;
+  margin-left: 180px;
+   padding: 20px; 
+  padding-top: 13px;
+  height: 325px;
+}
+
+.attendSelectDiv2 {
+  padding: 10px;
+  margin-left: 2px;
+  background-color: #a3bfdc;
+}
+
+
+.attendSelectDiv2 select, .attendSelectDiv2 input[type="date"] {
+  margin-bottom:0px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 17px;
+}
+.attendSelectDiv2 label{
+  font-weight: bold;
+  font-size: 23px;
+  margin-right: 20px;
+}
+
+.summaryDiv{
+  border: 3px solid rgb(12, 12, 12,0.7);
+  border-radius: 5px;
+  width:40%;
+  height: auto;
+  background-color: #bee3dd;
+  padding-left:0px;
+}
+.totalCountDiv{
+  padding:30px
+}
+.totalCountDiv table{
+  font-size: 23px;
+  width:70%;
+ margin-left: 100px;
+
+}
+.totalCountDiv td{
+  padding: 10px;
+}
+.errorMessage2 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 140px;
+  color:rgb(6, 6, 6,0.5)
+}
+
+.rangeTable td{
+  padding: 10px;
+}
+.rangeTable p strong{
+  margin-right: 20px;
+}
+/*-------------------------------------------footer.js-----------------------------------------------*/
+.footer {
+  background-color: #040610;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  color:White;
+  font-weight: bold;
+}
+
+/*-------------------------------------Login.js----------------------------------------*/
+.loginMainDiv{
+  width:100%;
+  height:780px;
+  background-image: url("D:\xampp\React\Attendance System\public\image\BackGrd.jpg");
+  display:flex;
+  align-items: center;
+  padding-left:37.5%;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+.loginDiv{
+  background-color:rgba(197, 211, 232, 0.5);
+  padding:30px;
+  border-radius: 10px;
+  width: 40%;
+  height:500px;
+  border:5px solid rgb(152, 139, 148,0.5) ;
+  box-shadow: 40px 40px 10px rgba(250, 250, 250, 0.3);
+}
+.loginDiv input{
+  padding:10px;
+  margin-top: 5px;
+  margin-left:30px;
+  margin-bottom: 25px;
+  width: 300px;
+  text-align: center;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.loginDiv button{
+  padding:10px;
+  margin-left: 30px;
+  text-align: center;
+  width:300px;
+  border-radius: 8px;
+  font-size: 17px;
+  background-color: #2036f5;
+  color: white;
+  cursor: pointer;
+}
+.loginDiv button:hover{
+  background-color: #2312aa;
+}
+.icon{
+  color: rgb(20, 1, 1);
+  font-size: 90px;
+  text-align: center;
+  padding: 0px;
+}
+.userLogin{
+  color: rgb(20, 1, 1);
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  padding-right: 2.5rem; /* Add space for the eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*------------------------------logout-------------------------------*/
