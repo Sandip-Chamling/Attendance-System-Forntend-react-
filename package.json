@@ -11,6 +11,7 @@
     "date-fns": "^3.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "sweetalert2": "^11.14.0",
@@ -45,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@chromatic-com/storybook": "^1.7.0",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
@@ -59,5 +61,6 @@
     "prop-types": "^15.8.1",
     "storybook": "^8.2.9",
     "webpack": "^5.94.0"
-  }
+  },
+  "proxy": "https://localhost:7113"
 }

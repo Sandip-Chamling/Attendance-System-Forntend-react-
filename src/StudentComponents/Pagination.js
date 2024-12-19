@@ -14,11 +14,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange,totalStudents,curren
     }
   };
   const getTotalCount = () => {
-    if (currentFilter === 'active') {
-      return "Active Students: ";
-    } else if (currentFilter === 'inactive') {
-      return "Inactive Students: ";
-    }
     return "Total Students: ";
   };
 

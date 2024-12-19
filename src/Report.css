@@ -1,0 +1,231 @@
+/*-------------------------------------Report.js--------------------------------------*/
+.mainRepoDiv{
+    margin-top: 140px;
+    margin-bottom: 70px;
+  }
+  
+  /*--------------------------------------Individual.js----------------------------------*/
+  .reportDiv {
+    margin-bottom: 20px;
+    background-color: #687686;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 70px;
+    margin-left:100px ;
+    width:350px;
+  }
+  .reportDiv form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color:#a3bfdc;
+    border-radius: 10px;
+  
+  }
+  .individualForm select, .individualForm input {
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .reportDiv label{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .mainIndividual{
+    background-color: #4aefec;
+  }
+  
+  .mainGridDiv{
+    border: 2px solid black;
+    background-color: #cfe3e6;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns:auto auto auto auto auto auto auto ;
+    padding: 10px;
+    padding-left: 0px;
+  }
+  
+  .present{
+    color:rgb(233, 238, 233);
+    background-color: #229735;
+  }
+  .absent{
+    color:rgb(245, 242, 242);
+    background-color: rgb(151, 52, 52);
+  }
+  .Holiday{
+    color:rgb(19, 17, 17,0.5);
+    background-color: rgba(201, 201, 190, 0.893);
+    
+  }
+  .calendar th{
+    background-color: #1c1173;
+    color: white;
+  }
+  .present,.absent, .empty{
+    border:1px solid black;
+    
+  }
+  .holiday{
+    background-color: #007bff;
+  }
+  
+  
+  .mainGridDiv{
+    width:80%;
+    margin-left: 160px;
+  }
+  .totalDiv{
+    font-size: 23px;
+    padding: 20px;
+    margin-left: 20px;
+  }
+  
+  .dateDiv{
+  margin-top:30px ;
+  font-size: 30px;
+  margin-left: 160px;
+  }
+  
+  .calendar{
+  width:100%;
+  height: 400px;
+  background-color: rgb(249, 242, 242);
+  border-collapse: collapse;
+  margin-left: 10px;
+  }
+  
+  .calendar th{
+    font-size: larger;
+  }
+  
+  .calendarTr, .calendar td{
+    border: 2px solid black;
+    height: 30px;
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+  /*-----------------------------------------Section.js----------------------------------------------*/
+  
+  .sectionContainer {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 20px; 
+    background-color: #007bff;
+    margin-top: 20px;
+  }
+  
+  .formContainer {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0px;
+    background-color: #687686;
+    width: 345px;
+    margin-right: 100px;
+    margin-left: 100px;
+     padding: 20px; 
+    padding-top: 13px;
+    height: 400px;
+  }
+  
+  .attendSelectDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 2px;
+  }
+  
+  
+  .attendSelectDiv select, .attendSelectDiv input[type="date"] {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .attendanceTableContainer {
+    border: 1px solid #151414;
+    border-radius: 5px;
+    padding: 20px;
+    width:40%;
+    height: auto;
+    background-color: #bee3dd;
+  }
+  
+  .sectionTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sectionTable th {
+    border: 1px solid #090909;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #3a3f47;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .sectionTable td {
+    border: 1px solid #090909;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    color: #333;
+    background-color: #f7f7f7;
+  }
+  
+  .sectionTable tr:nth-child(even) td {
+    background-color: #e6dddd;
+  }
+  
+  .sectionTable tr:hover td {
+    background-color: #d1d1d1;
+    cursor: pointer;
+  }
+  
+  .sectionTable th, .sectionTable td {
+    transition: background-color 0.3s ease;
+  }
+  
+  .sectionTable th:first-child, .sectionTable td:first-child {
+    border-left: 2px solid #090909;
+  }
+  
+  .sectionTable th:last-child, .sectionTable td:last-child {
+    border-right: 2px solid #090909;
+  }
+  
+  .sectionTable tr:last-child td {
+    border-bottom: 2px solid #090909;
+  }
+  
+  .errorMessage {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 160px;
+    color:rgb(6, 6, 6,0.5)
+  }
+  .totalContainer{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0px;
+    background-color: #d3dbe4;
+    width: 400px;
+    margin-right: 100px;
+    margin-left: 50px;
+    padding: 20px; 
+    padding-top: 13px;
+    height: 400px;
+  }
+   
+  

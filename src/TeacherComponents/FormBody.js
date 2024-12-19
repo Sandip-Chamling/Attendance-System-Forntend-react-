@@ -1,10 +1,23 @@
-import React from 'react';
-import OptionalSubjects from './OptionalSubject';
+import {React, useEffect, useState} from 'react';
 
 const FormBody = ({ formData, handleChange, isEditMode, 
-  handleCancel, selectedSubjects, setSelectedSubjects }) => {
+  handleCancel }) => {
+    const[faculty, setFaculty] = useState([]);
 
     const today = new Date().toISOString().split('T')[0];
+
+    useEffect(() => {
+      const fetchFaculty = async () => {
+        try {
+          const response = await fetch('https://localhost:7113/api/Faculty');
+          const data = await response.json();
+          setFaculty(data); 
+        } catch (error) {
+          console.error('Error fetching Faculty:', error);
+        }
+      };
+      fetchFaculty();
+    }, []);
 
   return (
     <>
@@ -89,34 +102,55 @@ const FormBody = ({ formData, handleChange, isEditMode,
               maxLength="10"
             /></td>
          
-            <td><label htmlFor="program">Program: </label><select
-              name="program"
-              id="program"
-              value={formData.program}
+            <td><label htmlFor="faculty">Teaching Faculty: </label><select
+              name="facultyId"
+              id="facultyId"
+              value={formData.facultyId}
               onChange={handleChange}
               required
             >
-              <option value="" disabled>Select Program</option>
-              <option value="Bachelor Of Computer Application">Bachelor Of Computer Application</option>
-              <option value="Bachelor in Business Studies">Bachelor in Business Studies</option>
-              <option value="Bachelor in Business Management">Bachelor in Business Management</option>
-              <option value="Bachelor in Arts">Bachelor in Arts</option>
-              <option value="Bachelor in Business Administration">Bachelor in Business Administration</option>
+              <option value="" disabled>Select Faculty</option>
+                {faculty.map(program=> (
+                  <option key={program.id} value={program.id}>
+                    {program.facultyName}
+                  </option>
+                ))}
+                
             </select></td>
+          </tr>
+          <tr>
+           
+            <td><label>Teaching Semester:</label><br/>
+            <select name="semester" id="semesterid"
+            value={formData.semester}
+            onChange={handleChange}
+            required
+            >
+              <option value="" disabled>Select Semester</option>
+              <option value="1">1st Semester</option>
+              <option value="2">2nd Semester</option>
+              <option value="3">3rd Semester</option>
+              <option value="4">4th Semester</option>
+              <option value="5">5th Semester</option>
+              <option value="6">6th Semester</option>
+              <option value="7">7th Semester</option>
+              <option value="8">8th Semester</option>
+              
+            </select>
+
+            </td>
           </tr>
           </tbody>
          </table>
-            <OptionalSubjects
-            program={formData.program}
-            selectedSubjects={selectedSubjects}
-            setSelectedSubjects={setSelectedSubjects}
-                />
+            
         <button className="submitBtn" type="submit">{isEditMode ? 'Update' : 'Register'}</button>
         {isEditMode &&
             <button className="cancelBtn" type="button" onClick={handleCancel}>Cancel</button>
           }
+          
     </>
   )
 };
 
 export default FormBody;
+
