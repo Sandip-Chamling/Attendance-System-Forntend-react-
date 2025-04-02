@@ -304,7 +304,7 @@ text-align: center;
   align-items: flex-start;
   display: flex;
   background-color: #0e0651;
-  position: fixed; 
+  position:fixed;
   padding: 0px;
   top: 0;
   left: 0;
@@ -375,12 +375,23 @@ text-align: center;
   color: red;
 }
 /*------------------------*/
+.navUl .activeLink > .navLink {
+  color: #007bff; 
+}
+
+.navUl .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+/*-------------*/
 
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(192, 209, 212, 0.7);
+  background-color: rgba(192, 209, 212);
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
@@ -928,6 +939,19 @@ margin-right: 10px;
 }
 .rangeTable p strong{
   margin-right: 20px;
+}
+/*-------------------------------------------recommendation.js-----------------------------------------------*/
+.recDiv{
+  margin-top: 150px;
+  margin-left:70px;
+}
+.titleHolder{
+  text-align: center;
+  font-weight: bold;
+}
+.ARholder{
+  font-weight: bold;
+  text-decoration: underline;
 }
 /*-------------------------------------------footer.js-----------------------------------------------*/
 .footer {
